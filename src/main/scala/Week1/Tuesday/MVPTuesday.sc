@@ -87,7 +87,7 @@ val isEqual = str1 == str2    // false
 val isLessThan = str1 < str2  // true, because "Hello" is lexicographically less than "World"
 
 // Using the variable
-num3 = num3 + 5               // num3 was 10, now it's 15
+num3 = num3 + 5// num3 was 10, now it's 15
 
 // Checking odd/even using modulus
 val isNum1Odd = num1 % 2 != 0 // true, because 17 is odd
