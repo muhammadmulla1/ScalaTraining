@@ -65,3 +65,5 @@ val result: Boolean = (1 < 48) && (71 == 10 || 19 + 10 == 29)
 
 // Print the result
 println(s"The result of (1 < 48) && (71 == 10 || 19 + 10 == 29) is $result")
+
+
