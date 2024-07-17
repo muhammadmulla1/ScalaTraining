@@ -64,3 +64,36 @@ notification match {
   case VoiceRecording(contactName, link) => "Recording form " + contactName + "With link " + link
   case _ => ""
 }
+
+// Task 1
+val pizza: String = "meat"
+
+
+pizza.toLowerCase match {
+  case "spicy" => println("American Hot")
+  case "veggie" => println("Vegetable Supreme")
+  case "bbq" => println("Barbecue Base")
+  case "meat" => println("Meat Feast")
+  case _ => println(s"$pizza is not valid")
+}
+
+abstract class Pizza
+
+case class AmericanHot (price: Double, size: Int, crust: String) extends Pizza
+
+case class VegetableSupreme (price: Double, size: Int, crust: String) extends Pizza
+
+case class BarbecueBase (price: Double, size: Int, crust: String) extends Pizza
+
+case class MeatFeast (price: Double, size: Int, crust: String) extends Pizza
+
+val pizza: Pizza = MeatFeast(10.99, 11, "classic")
+
+pizza match {
+  case AmericanHot(price, size, crust) => "Pizza Price " + price + "size " + size + "crust" + crust
+  case VegetableSupreme(price, size, crust) => "Pizza Price " + price + "size " + size + "crust" + crust
+  case BarbecueBase(price, size, crust) => "Pizza Price " + price + "size " + size + "crust" + crust
+  case MeatFeast(price, size, crust) => "Pizza Price " + price + ". size " + size + ". crust" + crust
+
+  case _ => ""
+}
