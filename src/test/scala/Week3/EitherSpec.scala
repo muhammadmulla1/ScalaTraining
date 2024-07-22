@@ -1,8 +1,13 @@
 package Week3
 
+import Week3.Friday.Futures
 import Week3.Thursday.Either._
 import org.scalatest.wordspec.AnyWordSpec
 import org.scalatest.matchers.should.Matchers
+
+import scala.concurrent.ExecutionContext.Implicits.global
+import scala.concurrent.Future
+import org.scalatest.concurrent.ScalaFutures
 
 class EitherSpec extends AnyWordSpec with Matchers {
 
@@ -20,8 +25,8 @@ class EitherSpec extends AnyWordSpec with Matchers {
     }
     "return a Left" when {
       "the number is even" in {
-//        val result = isOdd(4)
-//        result shouldBe Left(IsOddError)
+        //        val result = isOdd(4)
+        //        result shouldBe Left(IsOddError)
         isOdd(4) shouldBe Left(IsOddError)
       }
     }
