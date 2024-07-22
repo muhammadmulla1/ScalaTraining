@@ -1,7 +1,8 @@
 package Week3.Thursday
 
 import sun.security.util.Password
-
+import scala.concurrent.ExecutionContext.Implicits.global
+import scala.concurrent.Future
 import java.time.LocalDate
 
 object Either extends App{
@@ -94,3 +95,7 @@ object Either extends App{
   println(validatedUser(dobBad)) // Left
   println(validatedUser(goodUser)) // Right
 }
+
+
+
+
